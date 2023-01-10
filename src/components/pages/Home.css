@@ -1,0 +1,76 @@
+.main_body {
+  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.heading {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 700;
+}
+.playerInfo_home {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 20px;
+}
+.playerInfo_home_outer {
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.player1,
+.player2 {
+  display: flex;
+  flex-direction: column;
+}
+input,
+select {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+input:focus,
+select :focus {
+  outline-width: 0px;
+}
+select > option {
+  background: black;
+}
+::placeholder {
+  color: white;
+}
+.start_button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.start_button > Button {
+  min-width: 50px;
+  font-size: 30px;
+  font-weight: 600;
+  background-color: rgb(57, 255, 47);
+}
+@media (width>=1200) {
+  .heading {
+    font-size: 70px;
+  }
+}
+@media (width<=400px) {
+  .heading {
+    font-size: 30px;
+  }
+  .start_button > Button {
+    font-size: 20px;
+  }
+}

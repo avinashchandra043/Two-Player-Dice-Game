@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: 600;
+}
+.GamePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: space-around;
+  background-image: linear-gradient(to bottom right, #0100ec, #fb36f4);
+}
+.inner_box {
+  display: flex;
+  align-items: center;
+  height: 60%;
+  width: 90%;
+  max-width: 1000px;
+  justify-content: space-around;
+}
+.p1,
+.p2 {
+  height: 90%;
+  width: 50%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(48, 222, 245);
+  max-width: 300px;
+  border: 2px solid black;
+}
+.p2 {
+  background-color: rgb(48, 222, 245);
+}
+.playerName,
+.playerScore,
+.scoreBox,
+.current,
+.current_Score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.quitButton > Button {
+  background: blue;
+  color: white;
+}
+.playerName {
+  font-size: 30px;
+}
+.playerScore {
+  font-size: 40px;
+}
+.scoreBox {
+  width: 50%;
+  border-radius: 5px;
+}
+.current {
+  padding: 10px 0px 20px 0px;
+}
+.current_Score {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+.playerInfo {
+  display: flex;
+  flex-direction: column;
+}
+.personalDetail {
+  display: flex;
+  font-size: 15px;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.dice_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quitGame > Button {
+  background-color: rgb(217, 31, 31);
+}
+.quitGame > Button:hover,
+.quitGame > Button:active {
+  background-color: red;
+}
+.newGame > Button {
+  background-color: green;
+}
+.newGame > Button:hover,
+.newGame > Button:focus {
+  background-color: rgb(5, 252, 5);
+}
+.GameButton {
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+}

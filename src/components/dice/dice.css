@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.black_dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: linear-gradient(black, rgb(92, 91, 91));
+  box-shadow: 0px 1px 0px 1px white;
+}
+.red_dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: linear-gradient(rgb(119, 51, 51), red);
+  box-shadow: 0px 1px 0px 1px white;
+}
+.dice_out {
+  height: 100px;
+  width: 100px;
+  border: 1px solid rgba(48, 47, 47, 0.395);
+  border-radius: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(rgb(235, 233, 233), rgb(215, 210, 210));
+  box-shadow: inset 0px -3px 6px -1px rgba(65, 63, 63, 0.666),
+    inset 0px 5px 4px 0px white;
+}
+.dice_in {
+  height: 75px;
+  width: 75px;
+  background-image: linear-gradient(rgb(215, 210, 210), rgb(235, 233, 233));
+  border-radius: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.dot_box {
+  height: 85%;
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 30%;
+  flex-direction: column;
+}
+.upper_div2 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.lower_div2 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.upper_div4 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.lower_div4 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.dice_out:active {
+  animation: move 0.2s linear;
+}
+@keyframes move {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@media screen and (max-width: 510px) {
+  .black_dot {
+    width: 14px;
+    height: 14px;
+    box-shadow: 0px 0.7px 0px 0.7px white;
+  }
+  .red_dot {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    box-shadow: 0px 0.7px 0px 0.7px white;
+  }
+  .dice_out {
+    height: 70px;
+    width: 70px;
+    border: 0.7px solid rgba(48, 47, 47, 0.395);
+    box-shadow: inset 0px -2.1px 4.2px -0.7px rgba(65, 63, 63, 0.666),
+      inset 0px 3.5px 2.8px 0px white;
+  }
+  .dice_in {
+    height: 52.5px;
+    width: 52.5px;
+  }
+}
