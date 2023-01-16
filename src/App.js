@@ -4,6 +4,7 @@ import DiceHandler from "./components/dice/diceHandler";
 import GamePage from "./components/pages/GamePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
+import NewHome from "./components/pages/NewHome";
 function App() {
   const [playerInfo, setPlayerInfo] = useState([]);
   return (

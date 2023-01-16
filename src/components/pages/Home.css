@@ -1,7 +1,8 @@
 .main_body {
   background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+  /* background-color: #00c6fb; */
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -19,7 +20,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   max-width: 1200px;
-  gap: 20px;
+  gap: 40px;
 }
 .playerInfo_home_outer {
   width: 100vw;
@@ -27,8 +28,7 @@
   display: flex;
   flex-direction: column;
 }
-.player1,
-.player2 {
+.player1 {
   display: flex;
   flex-direction: column;
 }

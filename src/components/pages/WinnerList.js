@@ -1,7 +1,6 @@
 import React from "react";
 import "./WinnerList.css";
 function WinnerList(props) {
-  console.log(props.PlayerList);
   return (
     <div className="outer_winner_list">
       <div className="winner_heading">Winner List</div>

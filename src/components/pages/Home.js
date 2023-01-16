@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Home.css";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router";
+
 function Home({ setArrFunc }) {
   const navigate = useNavigate();
   const [playerName1, setPlayerName1] = useState("Player 1");

@@ -55,7 +55,7 @@ function GamePage(props) {
         }
       }
       setChance((prevValue) => prevValue + 1);
-      console.log(score1, score2);
+      // console.log(score1, score2);
     }
   };
   const handleQuito = (event) => {
@@ -156,5 +156,4 @@ function GamePage(props) {
     </>
   );
 }
-
 export default GamePage;
