@@ -6,11 +6,17 @@ function GamePage1({ playerStoredData }) {
   console.log(playerStoredData);
   return (
     <div className="changed_value">
-      {playerStoredData.map((value) => (
-        <div>
-          {value[0]} {value[1]} {value[2]}
-        </div>
-      ))}
+      {playerStoredData.map((value) => {
+        if (value[0] === "") {
+          value[0] = `Player ${value[3]}`;
+        }
+        return (
+          <div>
+            Name: {value[0]} &nbsp;&nbsp;&nbsp;&nbsp;Age: {value[1]}{" "}
+            &nbsp;&nbsp;&nbsp;&nbsp;Gender: {value[2]}
+          </div>
+        );
+      })}
     </div>
   );
 }
