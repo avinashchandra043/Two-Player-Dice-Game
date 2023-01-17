@@ -5,13 +5,14 @@ import GamePage from "./components/pages/GamePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
 import NewHome from "./components/pages/NewHome";
+import GamePage1 from "./components/pages/GamePage1";
 function App() {
   const [playerInfo, setPlayerInfo] = useState([]);
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home setArrFunc={setPlayerInfo} />} />
-        <Route path="/game" element={<GamePage playerInfo={playerInfo} />} />
+        <Route path="/" element={<NewHome setArrFunc={setPlayerInfo} />} />
+        <Route path="/game" element={<GamePage1 playerInfo={playerInfo} />} />
       </Routes>
     </Router>
   );

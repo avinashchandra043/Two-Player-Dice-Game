@@ -1,12 +1,25 @@
 import { Button } from "@mui/material";
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { changeCD, changePSD } from "../../store/myAction";
 
-function PlayerData(props) {
+function PlayerData({ index, playerStoredData, currentData, changeCD }) {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
-  const value = props.index;
-  const handleEachPlayerSubmit = () => {};
+  const value = index;
+  const handleEachPlayerSubmit = (event) => {
+    event.preventDefault();
+    if (name === undefined) {
+      setName(`Player ${index}`);
+    }
+    if (age < 0) {
+      alert("input correct age");
+      return;
+    }
+    let data = [name, age, gender, value];
+    changeCD(data);
+  };
   return (
     <div>
       <div className="player1">
@@ -27,11 +40,22 @@ function PlayerData(props) {
           <option value="Others">Others</option>
         </select>
       </div>
-      <Button variant="contained" onClick={handleEachPlayerSubmit(value)}>
+      <Button variant="contained" onClick={handleEachPlayerSubmit}>
         Save
       </Button>
     </div>
   );
 }
-
-export default PlayerData;
+const mapStateToProps = (state) => {
+  return {
+    playerStoredData: state.my.playerStoredData,
+    currentData: state.my.currentData,
+  };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changeCD: (value) => dispatch(changeCD(value)),
+    changePSD: (value) => dispatch(changePSD(value)),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(PlayerData);

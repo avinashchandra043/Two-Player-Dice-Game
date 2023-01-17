@@ -28,7 +28,8 @@
   display: flex;
   flex-direction: column;
 }
-.player1 {
+.player1,
+.player2 {
   display: flex;
   flex-direction: column;
 }

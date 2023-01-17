@@ -1,0 +1,6 @@
+.changed_value {
+  color: black;
+  display: flex;
+  gap: 30px;
+  background-color: green;
+}

@@ -28,7 +28,7 @@ function Home({ setArrFunc }) {
     //         playerGender2,
     //       ];
     //       setArrFunc(playerInfo);
-    //       navigate("/game");
+    navigate("/game");
     //     }
   };
   const checkAuth = (event) => {
@@ -46,7 +46,7 @@ function Home({ setArrFunc }) {
         <div>
           <input
             type="number"
-            placeHolder="Enter Number Of Player"
+            placeholder="Enter Number Of Player"
             onChange={(e) => setPlayerNo(e.target.value)}
           />
         </div>
