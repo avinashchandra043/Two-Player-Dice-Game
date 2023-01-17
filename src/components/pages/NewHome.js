@@ -3,8 +3,9 @@ import "./Home.css";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router";
 import PlayerCard from "./PlayerCard";
+import { connect } from "react-redux";
 
-function Home({ setArrFunc }) {
+function Home({ setArrFunc, playerStoredData }) {
   const navigate = useNavigate();
   const [playerNo, setPlayerNo] = useState("");
   const [playerInput, setPlayerInput] = useState(() => false);
@@ -16,20 +17,13 @@ function Home({ setArrFunc }) {
   //   const [playerGender2, setPlayerGender2] = useState("");
   const handleStartGame = (event) => {
     event.preventDefault();
-    //     if (playerAge1 < 0 || playerAge2 < 0) {
-    //       alert(`Enter non negative age`);
-    //     } else {
-    //       const playerInfo = [
-    //         playerName1,
-    //         playerAge1,
-    //         playerGender1,
-    //         playerName2,
-    //         playerAge2,
-    //         playerGender2,
-    //       ];
-    //       setArrFunc(playerInfo);
-    navigate("/game");
-    //     }
+    if (playerStoredData.length + 1 < playerNo) {
+      alert("save all the fields");
+      return;
+    } else {
+      console.log(playerStoredData);
+      navigate("/game");
+    }
   };
   const checkAuth = (event) => {
     event.preventDefault();
@@ -69,5 +63,11 @@ function Home({ setArrFunc }) {
     </div>
   );
 }
-
-export default Home;
+const mapStateToProps = (state) => {
+  // console.log(state);
+  return {
+    playerStoredData: state.my.playerStoredData,
+    currentData: state.my.currentData,
+  };
+};
+export default connect(mapStateToProps)(Home);

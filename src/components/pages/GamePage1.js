@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import "./GamePage1.css";
 
 function GamePage1({ playerStoredData }) {
-  console.log(playerStoredData);
   return (
     <div className="changed_value">
       {playerStoredData.map((value) => {
@@ -21,7 +20,7 @@ function GamePage1({ playerStoredData }) {
   );
 }
 const mapStateToProps = (state) => {
-  console.log(state);
+  // console.log(state);
   return {
     playerStoredData: state.my.playerStoredData,
     currentData: state.my.currentData,

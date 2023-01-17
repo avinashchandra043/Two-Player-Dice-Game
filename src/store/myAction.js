@@ -14,7 +14,7 @@ export const changePSD = (arr) => {
 export const changeCD = (arr) => {
   initialState.playerStoredData[arr[3]] = arr;
   changePSD(initialState.playerStoredData);
-  console.log(initialState.playerStoredData);
+  // console.log(initialState.playerStoredData);
   return {
     type: CHANGE_CD,
     payload: arr,

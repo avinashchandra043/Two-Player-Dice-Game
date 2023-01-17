@@ -9,7 +9,7 @@ function PlayerCard(props) {
   return (
     <>
       {a.map((value) => {
-        console.log("coming");
+        // console.log("coming");
         return <PlayerData index={value} />;
       })}
     </>
